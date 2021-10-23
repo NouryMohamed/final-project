@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a68acc73e0.js" crossorigin="anonymous"></script>
+    <title>Coronoavirus (covid-19) Prevention & Informatics</title>
+    <!-- icon for title -->
+    <link rel="icon" href="https://www.kcsmn.org/cms/lib/MN02000376/Centricity/Domain/1361/Covid%20symbol.png"  type = "image/x-icon">
+</head>
+<!-- style start -->
+<style>
+    body{
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color:#dce5f4 ;
+}
+.container {
+  width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.context {
+    font-size: large;
+    font-weight: bold;
+    
+}
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+
+}
+.covidnumbers .cases {
+  color:darkolivegreen;
+  text-transform: uppercase;
+   letter-spacing: 0.05em;
+   font-size: 20px;
+   font-weight: bold;
+  margin-bottom: 10px;
+ text-align: center; 
+}
+.covidnumbers .cases .count {
+  color: teal;
+  font-size: x-large;
+}
+   
+.covidnumbers .death {
+  color:darkolivegreen;
+  text-transform: uppercase;
+   letter-spacing: 0.05em;
+   font-size: 20px;
+   font-weight: bold;
+  margin-bottom: 10px;
+ text-align: center; 
+}
+
+.covidnumbers .death .count {
+  color: teal;
+  font-size: x-large;
+}
+
+.covidnumbers .recovered {
+  color:darkolivegreen;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+ text-align: center; 
+}
+.covidnumbers .recovered .count {
+  color: teal;
+  font-size: x-large;
+}
+
+.lastupdate {
+  color: darkviolet;
+  text-align: center;
+  text-decoration: underline;
+}
+.covidimage {
+ position: absolute;
+  top: 110% ;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  width: 60%;
+  height: auto;
+  opacity: 0.5;
+    z-index: -1;
+} 
+.container-text {
+  display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    padding:  100px;
+    margin: auto; 
+    background-color: ghostwhite;
+
+}
+h5 {
+  font-size: x-large;
+  font-weight: bold;
+  color: blue;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+h2 {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: dimgray;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.maintext {
+  font-size: 20px;
+}
+.midtext {
+  font-size: 20px;
+}
+.lastext {
+  font-size: 20px;
+}
+.listgroup {
+  border: 1px solid #e7e8ff;
+    list-style: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow:20px 20px 50px dodgerblue;
+    box-sizing: border-box;
+    right:20px ; 
+    height: 35%;
+    
+    position: absolute;
+    font-size: larger;
+    color: goldenrod;
+    
+}
+.containertext h5 {
+  text-align: center;
+  text-decoration: underline;
+  color: #2a81ea;
+  font-size: 25px;
+   letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.containertext h2 {
+  text-align: center;
+  font-weight: bolder;
+  color: #50658e;
+    font-size: 42px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.containertext p {
+  font-size: 20px;
+  margin-bottom: 50px;
+  
+
+}
+
+.card {
+ margin-left: 30% ; 
+width: 20rem;
+height: 500px;
+ 
+   
+}
+
+.cardimg {
+  width: 100%;
+  border-bottom: 6px solid #9cc2f7;
+}
+.card-body h3 {
+ color: lightcoral;
+ font-weight: bold;
+ 
+}
+
+
+.container-symptoms-part {
+  background-color: white;
+} 
+.textbtn .thetext {
+font-size: 20px;
+}
+
+.container-pre-part {
+  background-color: #f7f9fe;
+}
+
+.btnofadv {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: left;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 20px;
+  white-space: nowrap;
+} 
+
+.containericon {
+  display: flex;
+  flex-wrap: wrap;
+}
+.texticon {
+  margin-bottom: 20px;
+    display: flex;
+    color: #3d4b69;
+    font-size: 18px;
+}
+.fa-check-circle {
+  margin-right: 10px;
+    color: #3dca93
+}
+.texticon span {
+  font-weight: bold;
+}
+
+.stepsimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 20%;
+       
+
+}
+
+.containerhands{
+  background-color: #ead1dc;
+}
+.handstext h2 {
+ 
+  font-weight: bold;
+  text-align: center;
+  color: #50658e;
+}
+
+.handstext {
+font-size: large;
+font-weight: bolder;
+}
+ 
+.texthands {
+  font-size: 25px;
+  font-style:italic;
+  text-align: justify;
+}
+.caution {
+  background-color: #2766bb;
+  background-image: url(http://frontend.projects-amit-learning.com/images/shape-a.png);
+  background-position: center;
+ background-repeat: no-repeat;
+background-size: cover;
+padding: 100px 0;
+ color: #fff;
+ width: 100%;
+}
+
+.cautiontitle {
+  flex-basis: 90%;
+    margin: auto;
+}
+.cautiontitle h5 {
+  color: #73e3ff;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+.cautiontitle h2 {
+  font-size: 42px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: center;
+    color: white;
+}
+.cautiontitle p {
+  line-height: 2.5em;
+    color: #ced4ff;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+.cautiontitle p span {
+  font-weight: bold;
+    color: whitesmoke;
+}
+
+.cautiontext {
+  background-color: #1b47a1;
+   padding: 30px;
+   margin: 20px;
+    flex-basis: 90%; 
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.cautiontext h6 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold ;
+}
+
+.cautiontext p {
+  line-height: 2.5em;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+
+.fa-hand-point-right {
+  overflow: visible;
+  size: 15px;
+  color: #73e3ff;
+}
+
+.cautiontext ul li {
+  font-size: larger;
+  font-style: italic;
+  margin-bottom: 10px;
+  display: flex;
+}
+.protection {
+  padding: 100px;
+    background-color: #f7f9fe;
+}
+
+.protecttext {
+  width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.protecttext h2 {
+  color: #50658e;
+    font-size: 42px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 25px
+}
+
+.protecttext p {
+  line-height: 2.5em;
+  font-size: larger;
+  color: #134f5c;
+
+}
+
+.protectbox {
+  display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    flex-direction: column-reverse;
+    position: relative;
+    flex-basis: 45%;
+    order: 3;
+}
+.protectboxtext {
+  color: #2a81ea;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 20px 20px 0 0;
+}
+.fa-times-circle {
+  color: #f86168;
+    position: absolute;
+    font-size: 25px;
+    left: 60%;
+
+}
+
+.protectboxtwo {
+  flex-basis: 45%;
+  order: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  flex-direction: column;
+  position: relative;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    justify-content: space-around;
+}
+
+
+.fa-check-circle {
+  color: #3dca93;
+    position: absolute;
+    font-size: 21px;
+    right: 58%;
+    top: 0;
+    overflow: visible;
+}
+.protectboxtwotext {
+  color: #2a81ea;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 20px 0 0 20px;
+}
+
+
+.blog {
+    padding: 100px;
+    background-color: #e1bdff;
+}
+
+.blogtext {
+  width: 70%;
+  margin: auto;
+    text-align: center;
+}
+.blogtext h5 {
+  color: #2a81ea;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.blogtext h2 {
+  color: #50658e;
+    font-size: 42px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+ .blogbox {
+  display: flex;
+     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+
+.blogbox {
+  flex-basis: 50%;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0px 5px 40px 0px rgb(80 101 142 / 8%);
+}
+.blogboximage img{
+  width: 500px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+     
+}
+.blogboxtext h3 {
+  color: #465675;
+    margin: 20px 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.blogboxtext p {
+  color: #3d4b69;
+    line-height: 1.5em;
+    text-align: center;
+}
+ 
+footer {
+
+    background-color: #151c2e;
+    background-image: url(http://frontend.projects-amit-learning.com/images/shape-a.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.footermaintext {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    border-bottom: 1px
+ solid rgba(186, 186, 187, 0.1);
+}
+.footertext {
+  font-size: 28px;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.fa-virus {
+  color: rgb(245, 55, 55);
+}
+
+.footertext p {
+  color: #b2bfe0;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+.footericons {
+  display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    
+}
+.footericon {
+  flex-basis: 80%;
+    margin: 0 auto 50px ;
+    background-color: #50658e;
+    border-radius: 70%;
+    margin-right: 20px;
+    -webkit-border-radius: 50%;
+    color: #fff;
+    width: 45px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+}
+
+.fa-facebook-f {
+  display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -1.125em;
+    width: 0.7em;
+    
+}
+.fa-twitter {
+  display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -1.125em;
+    width: 1em;
+}
+.fa-youtube {
+  display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -1.125em;
+    width: 1.2em;
+}
+.footer-text ul li a {
+    color: #b2bfe0;
+    text-decoration: none;
+}
+.footercopyrights {
+    padding-top: 50px;
+}
+.copyrights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #b2bfe0;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.footercopyrights p {
+    color: #b2bfe0;
+    font-size: 13px;
+    line-height: 2em;
+}
+
+</style>
+<body>
+  <header>
+    <!-- start of nav  -->
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark w-auto h-auto">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">C<i class="fas fa-virus"></i>VID<span>19</span></a> 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- the nav items -->
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                   <li class="nav-item"><a href="#about" class="nav-link">About Corona</a></li>   
+                   <li class="nav-item"><a href="#symptons" class="nav-link">Symptons</a></li>   
+                   <li class="nav-item"><a href="#pre" class="nav-link">Prevention</a></li>  
+                    <li class="nav-item"><a href="#treat" class="nav-link">Treatment</a></li>  
+                    <li class="nav-item"><a href="#FAQ" class="nav-link">FAQ</a></li>  
+                    <li class="nav-item"><a href="#news" class="nav-link">News</a></li>  
+                    <li class="nav-item"> <a href="#do"><button class="btn btn-primary rounded-bottom">Do & Don’t</button></a></li> 
+                </ul>
+              </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <!-- end of nav -->
+      <!--covid banner  -->
+    <div class="container mt-3">
+        <div class="row">
+          <div class="col-md-4 offset-md-2" style="color: darkblue; font-size: xx-large; font-weight: bolder;">CORONA</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 offset-md-3" style="color: darkred; font-size: xx-large; font-weight: bold;">COVID-19</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-4" style="color: darkblue; font-size: xx-large; font-weight: bolder;">VIRUS</div>
+        </div>
+        <br>
+        <br>
+        <!-- top text after the banner -->
+        <div class="context">
+            <p>
+                The Coronavirus (COVID-19) was first reported in Wuhan, Hubei, China in December 2019, the
+                outbreak was later recognized as a pandemic by the World Health Organization (WHO) on 11
+                March 2020.
+            </p>
+            <br>
+            <!-- the btn and link -->
+            <div class="btn-container">
+                <a href="#protect"><button class="btn btn-primary btn-lg rounded-end">How to Protect <i class="fas fa-shield-alt"></i></button></a>
+                <a href="#about">About COVID-19 <i class="far fa-hand-point-right"></i></a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- the numbers -->
+        <div class="covidnumbers">
+          <div class="cases">
+            <p>Worldwide cases</p>
+              <span class="count">8,949,671</span>
+          </div>
+          <div class="death">
+            <p>Death</p>
+            <span class="count">467,432</span>
+          </div>
+          <div class="recovered">
+            <p>Recovered</p>
+            <span class="count">4,556,091</span>
+          </div>
+        </div>
+        <div class="lastupdate">
+          <p class="update"> * Last updated: Jun 21, 2020, 09:24 AM America/Chicago</p>
+        </div>
+        <!-- the symptons image -->
+          <img class="covidimage" src="http://frontend.projects-amit-learning.com/images/header-a.png ">
+        </div>
+        </div>
+      </div>
+    </header> 
+     <!-- end of header  -->
+    <br>
+    <br>
+    <br>
+    <!-- text part -->
+    <div class="container-text" id="about" >
+      <div class="row">
+        <h5>About the disease</h5>
+        <br>
+        <br>
+        <h2>Coronavirus (COVID-19)</h2>
+        <p class="maintext" >
+          <span><b>COVID-19 is a new illness that can affect your lungs and airways.</b></span> <br>
+          It's caused by a virus called coronavirus. It was discovered in December 2019 in Wuhan, Hubei,
+          China.
+      </p>
+      <p class="midtext">
+        Common signs of infection include respiratory symptoms, fever, cough, shortness of breath and
+        breathing difficulties. <br> more severe cases, infection can cause pneumonia, severe acute
+        respiratory syndrome, kidney failure and even death.
+    </p>
+    <p class="lastext">
+        Standard recommendations to prevent infection spread include regular hand washing, covering
+        mouth <br> and nose when coughing and sneezing, thoroughly cooking meat and eggs. Avoid close contact
+        with anyone showing symptoms of respiratory illness such as coughing and sneezing.
+    </p>
+      </div>
+      <!-- side list -->
+      <div class="listgroup">
+        <p>What you need to know:</p>
+        <ul>
+          <a href="#spread">
+            <li>how corona virus spread
+            <i class="fas fa-hand-point-right"></i>
+            </li>
+          </a>
+          <a href="#symptoms">
+            <li>Symptoms of coronavirus 
+              <i class="fas fa-hand-point-right"></i>
+            </li>
+          </a>
+          <a href="#pre">
+            <li>How to protect yourself
+              <i class="fas fa-hand-point-right"></i>
+            </li>
+          </a>
+          <a href="#treat">
+            <li>Treatment for coronavirus
+              <i class="fas fa-hand-point-right"></i>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div> 
+    <!-- end of about and the list -->
+    <br>
+    <br>
+    <br>
+ <!-- spread text -->
+  <div class="container" id="spread"> 
+    <div class="containertext">
+      <h5>How coronavirus is spread</h5>
+      <br>
+      <h2>Transmission of COVID-19</h2>
+      <p> Because it's a new illness, we do not know exactly how coronavirus spreads from person to person.
+        Similar viruses are spread in cough droplets.</p>
+    </div>
+    <!-- spread cards -->
+    <div class="row">
+      <div class="col-lg-4 mb-2">
+    <div class="card">
+      <img class="cardimg" src="http://frontend.projects-amit-learning.com/images/spread-a.png" alt="">
+      <div class="card-body">
+        <h3>Person-to-person spread as close contact with infected</h3>
+        <p>The coronavirus is thought to spread mainly from person to person. This can happen between
+          people who are in close contact with one another.</p>
+      </div> 
+    </div>
+    </div>
+    
+      <div class="col-lg-4 mb-2">
+    <div class="card">
+      <img class="cardimg" src="http://frontend.projects-amit-learning.com/images/spread-b.png" alt="">
+      <div class="card-body">
+        <h3>Touching or contact with infected surfaces or objects</h3>
+        <p>
+            A person can get COVID-19 by touching a surface or object that has the virus on it and then
+            touching their own mouth, nose, or possibly their eyes.
+        </p>
+      </div>
+    </div>
+    </div>
+    
+      <div class="col-lg-4 mb-2">
+    <div class="card">
+      <img class="cardimg" src="http://frontend.projects-amit-learning.com/images/spread-c.png" alt="">
+     <div class="card-body">
+      <h3>Droplets that from infected person coughs or sneezes</h3>
+      <p>
+          The coronavirus is thought to spread mainly from person to person. This can happen between
+          people who are in close contact with one another.
+      </p>
+     </div>
+     </div>
+    </div>
+    
+   </div>
+  </div>
+  
+<!-- done with spread part -->
+<br>
+<br>
+<br>
+<!-- start with symptons part -->
+<div class="container-symptoms-part" id="symptoms">
+  <div class="containertext">
+    <h5>What are the symptoms of COVID-19?</h5>
+       <h2>Symptoms of Coronavirus</h2>
+         <p>
+            The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have
+           aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually
+             mild and begin gradually. Also the symptoms may appear 2-14 days after exposure.
+          </p>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 mb-2">
+  <div class="card">
+    <img class="rounded-circle" src="http://frontend.projects-amit-learning.com/images/symptom-a.png" alt="" width="300px" height="150px">
+  <div class="card-body">
+    <h3>Fever</h3>
+    <p>
+        <span>High Fever </span>– this means you feel hot to touch on your chest or back (you do not
+        need to measure your temperature). It is a common sign and also may appear in 2-10 days if
+        you affected.
+    </p>
+
+  </div>
+  </div>
+    </div>
+    <div class="col-lg-4 mb-2">
+      <div class="card">
+        <img class="rounded-circle" src="http://frontend.projects-amit-learning.com/images/symptom-b.png" alt="" width="300px" height="150px">
+        <div class="card-body">
+          <h3>Shortness of breath</h3>
+          <p>
+              <span>Difficulty breathing</span> – Around 1 out of every 6 people who gets COVID-19 becomes
+              seriously ill and develops difficulty breathing or shortness of breath.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-2">
+      <div class="card">
+        <img class="rounded-circle" src="http://frontend.projects-amit-learning.com/images/symptom-c.png" alt="" width="300px" height="150px">
+        <div class="card-body">
+          <h3>Shortness of breath</h3>
+          <p>
+              <span>Difficulty breathing</span> – Around 1 out of every 6 people who gets COVID-19 becomes
+              seriously ill and develops difficulty breathing or shortness of breath.
+          </p>
+        </div>
+      </div>
+</div>
+<br>
+<br>
+<div class="textbtn">
+  <div class="thetext">
+    
+    <p> 
+      <i class="fas fa-exclamation-triangle" style="color: crimson;"></i> <span style="color: blue;"><b>Stay at home and call your doctor:</b> </span><i> 
+      If you think you have been exposed to COVID-19
+      and develop a fever and any symptoms, such as cough or difficulty breathing, call your
+      healthcare provider as soon as possible for medical advice.</i> 
+    </p>
+
+  </div>
+ 
+</div>
+</div>
+<!-- done with symptons part -->
+
+<!-- start with advice -->
+<div class="container-pre-part" id="pre">
+  <div class="containertext">
+    <br>
+    <br>
+    <h5>How to Protect Yourself?</h5>
+    <h2>Prevention & advice</h2>
+    <p>
+        There is currently no vaccine to prevent coronavirus disease 2019 (COVID-19). <span><b>The best way to
+          prevent illness is to avoid being exposed to this virus.</b></span> Stay aware of the latest
+        information on the COVID-19 outbreak, available on the WHO website and through your national and
+        local public health authority.
+    </p>
+ 
+
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-2" >
+      <div class="card-cir">
+        <img src="http://frontend.projects-amit-learning.com/images/advice-a.png" alt="">
+       <div class="cardtext">
+        <h3>Wash your hands frequently</h3>
+        <p>
+            Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with
+            soap and water for at least 20 seconds.
+        </p>
+
+       </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-2">
+      <div class="card-cir">
+       <img src="http://frontend.projects-amit-learning.com/images/advice-c.png" alt="">
+      <div class="cardtext" >
+        <h3>Avoid touching face</h3>
+        <p>
+            Hands touch many surfaces and can pick up viruses. So, hands can transfer the virus to your
+            eyes, nose or mouth and can make you sick.
+        </p>
+
+      </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 mb-2">
+      <div class="card-cir">
+        <img src="http://frontend.projects-amit-learning.com/images/advice-d.png" alt="">
+       <div class="cardtext">
+        <h3>Practice respiratory hygiene</h3>
+        <p>
+            Maintain good respiratory hygiene as covering your mouth & nose with your bent elbow or
+            tissue when cough or sneeze.
+        </p>
+
+       </div>
+      </div>
+      </div>
+      <div class="col-md-6 mb-2">
+        <div  class="card-cir" >
+          <img src="http://frontend.projects-amit-learning.com/images/advice-b.png" alt="">
+            <div class="cardtext">
+              <h3>Maintain social distancing</h3>
+              <p>
+                  Maintain at least 1 metre (3 feet) distance between yourself & anyone who is coughing or
+                  sneezing. If you are too close, get chance to infected.
+              </p>
+            </div>
+        </div>
+      </div> 
+       <div class="btnofadv">
+        <a href="#hands"><button class="btn-primary">Check how you wash hand <i class="fas fa-arrow-right"></i></button></a>
+        
+       </div>
+
+  </div>
+</div>
+<br>
+<br>
+<br>
+<!-- the end of advice part -->
+<!-- start with steps -->
+<div class="containericon">
+  <div class="steps">
+    <h2>Take steps to protect others</h2>
+    <br>
+    <br>
+         <ul>
+            <li>
+               <div class="texticon">
+                   <i class="fas fa-check-circle"></i>
+                   <span>Stay home if you’re sick</span> – Stay home if you are sick, except to get medical care.
+  </div>
+          </li>
+            <li>
+            <div class="texticon">
+              <i class="fas fa-check-circle"></i>
+              <span>Cover your mouth and nose</span> – with a tissue when you cough or sneeze (throw
+              used tissues in the trash) or use the inside of your elbow.
+            </div>
+            </li>
+
+            <li>
+              <div class="texticon">
+                <i class="fas fa-check-circle"></i>
+                <span>Wear a facemask if you are sick</span> – You should wear a facemask when you are around other people (e.g., sharing a room or vehicle) and before you enter a healthcare provider’s
+              </div>
+              </li>
+
+              <li>
+                <div class="texticon">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Clean AND disinfect frequently touched surfaces daily</span> – This includes phones, tables, light switches, doorknobs, countertops, handles, desks, toilets, faucets, and sinks.
+                </div>
+              </li>
+              
+              <li>
+                <div class="texticon">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Clean the dirty surfaces</span> – Use detergent or soap and water prior to
+                  disinfection.
+                </div>
+              </li>
+
+              <li>
+                <div class="texticon">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Stay informed about the local COVID-19 situation</span> – Get up-to-date information about local COVID-19 activity from
+                  <a href="#">public health officials.</a>
+                </div>
+              </li>
+              
+              <li>
+                <div class="texticon">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Dedicated, lined trash can</span> – If possible, dedicate a lined trash can for the ill person. Use gloves when removing garbage bags, and handling & disposing of trash.
+                </div>
+              </li>
+         </ul>
+
+         <div class="stepsimg">
+          <img src="http://frontend.projects-amit-learning.com/images/steps.png" alt="">
+          <br>
+          <br>
+          <br>
+          <br>
+        
+        </div> 
+</div>
+<!-- end with steps -->
+
+<!-- start with hands -->
+<div class="containerhands" id="hands">
+  <div class="handstext">
+    <h2>Follow steps to wash hands</h2>
+      <a href="#FAQ">Why do I need wash hand <i class="far fa-long-arrow-right"></i></a>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-6 mb-2" >
+      <div class="imghands">
+          <img src="http://frontend.projects-amit-learning.com/images/hand-a.png"  alt="">
+          <div class="texthands">
+            <p>Soap on Hand</p>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-2" >
+      <div class="imghands">
+        <img src="http://frontend.projects-amit-learning.com/images/hand-b.png" alt="">
+        <div class="texthands">
+          <p>Palm to Palm</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-2" >
+      <div class="imghands">
+        <img src="http://frontend.projects-amit-learning.com/images/hand-c.png" alt="">
+        <div class="texthands">
+          <p>Between Fingers</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-2" >
+      <div class="imghands">
+        <img src="http://frontend.projects-amit-learning.com/images/hand-d.png" alt="">
+        <div class="texthands">
+          <p>Back to Hands</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-2" >
+      <div class="imghands">
+        <img src="http://frontend.projects-amit-learning.com/images/hand-e.png" alt="">
+        <div class="texthands">
+          <p>Clean with Water</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-6 mb-2" >
+      <div class="imghands">
+        <img src="http://frontend.projects-amit-learning.com/images/hand-f.png" alt="">
+        <div class="texthands">
+          <p>Focus on Wrist</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- end with hands -->
+
+<br>
+<br>
+<br>
+<section class="caution" id="treat">
+  <div class="container">
+    <div class="cautiontitle">
+      <h5>Be carefull & Stay Safe</h5>
+      <h2>Treatment for coronavirus</h2>
+      <p>
+          <span>To date, there is no vaccine and no specific antiviral medicine to prevent or treat
+              COVID-2019.</span>
+            However, those affected should receive care to relieve symptoms. People
+          with serious illness should be hospitalized. Most patients recover thanks to supportive care.
+      </p>
+      <p>
+          Antibiotics do not help, as they do not work against viruses. Treatment aims to relieve the
+          symptoms while your body fights the illness. You'll need to stay in isolation, away from other
+          people, until you have recovered.
+      </p>
+
+    </div>
+    <br>
+    <br>
+    <div class="cautiontext">
+      <h6>Self Care</h6>
+           <p>
+            If you have mild symptoms, stay at home until you’ve recovered. You can relieve your symptoms if you:
+           </p>
+
+           <ul>
+            <li>
+                <div class="cautionicon"><i class="far fa-hand-point-right"></i></div>
+                <div class="cautiontext"> Rest and sleep</div>
+            </li>
+            <li>
+                <div class="cautionicon"><i class="far fa-hand-point-right"></i></i></div>
+                <div class="cautiontext">Keep warm</div>
+            </li>
+            <li>
+                <div class="cautionicon"><i class="far fa-hand-point-right"></i></div>
+                <div class="cautiontext">Drink plenty of liquids</div>
+            </li>
+            <li>
+                <div class="cautionicon"><i class="far fa-hand-point-right"></i></div>
+                <div class="cautiontext">
+                    Use a room humidifier or take a hot shower to help ease a sore throat and cough
+                </div>
+            </li>
+        </ul>
+        <h6>Medical Treatments</h6>
+        <p>
+            If you develop a fever, cough, and have difficulty breathing, promptly seek medical care. Call
+            in advance and tell your health provider of any recent travel or recent contact with travelers.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- Done with treatment -->
+<!-- start with protect -->
+<div class="protection" id="protect">
+  <div class="container">
+    <div class="protecttext">
+      <h5>Do’s & Don’ts</h5>
+       <h2>Protect yourself</h2>
+          <p>
+             The best thing you can do now is plan for how you can adapt your daily routine. Take few steps to
+              protect yourself as Clean your hands often, Avoid close contact, Cover coughs and sneezes, clean
+              daily used surfaces etc. The best way to prevent illness is to avoid being exposed to this virus.
+                </p>
+
+    </div>
+     <div class="protectbox">
+       <div class="protectboxtext">
+        <p>Avoid Close Contact</p>
+       </div>
+      <i class="fas fa-times-circle"></i>
+      <img src="http://frontend.projects-amit-learning.com/images/donts-a.png" alt="">
+     </div>
+     <div class="protectbox">
+       <div class="protectboxtext">
+        <p>Don’t Touch Face</p>
+       </div>
+       <i class="fas fa-times-circle"></i>
+       <img src="http://frontend.projects-amit-learning.com/images/donts-b.png" alt="">
+     </div>
+     <div class="protectbox">
+      <div class="protectboxtext">
+        <p>Social Distancing</p>
+      </div>
+      <i class="fas fa-times-circle"></i>
+      <img src="http://frontend.projects-amit-learning.com/images/donts-c.png" alt="">
+     </div> 
+    
+     <div class="protectboxtwo">
+       <div class="protectboxtwoimg">
+         <img src="http://frontend.projects-amit-learning.com/images/dos-a.png" alt="">
+       </div>
+       <i class="fas fa-check-circle"></i>
+       <div class="protectboxtext">
+        <p>Wash Your Hands</p>
+       </div> 
+     </div>
+     <div class="protectboxtwo">
+      <div class="protectboxtwoimg">
+      <img src="http://frontend.projects-amit-learning.com/images/dos-b.png" alt="">  
+     </div>
+     <i class="fas fa-check-circle"></i>
+     <div class="protectboxtext">
+      <p>Drink Much Watar</p>
+     </div>
+     </div>
+     <div class="protectboxtwo">
+      <div class="protectboxtwoimg">
+        <img src="http://frontend.projects-amit-learning.com/images/dos-c.png" alt="">
+      </div>
+      <i class="fas fa-check-circle"></i>
+      <div class="protectboxtext">
+        <p>Use Face Mask</p>
+      </div>
+     </div>
+    </div>
+</div>
+<!-- end with protect -->
+ 
+  <!-- start of blog -->
+  <section class="blog" id="news">
+    <div class="container">
+        <div class="blogtext">
+            <h5>Recent From Blog</h5>
+            <h2>Latest Update</h2>
+        </div>
+        
+       
+        
+        <div class="blogmainboxs">
+            <div class="blogbox">
+                <div class="blogboximage">
+                    <img src="http://frontend.projects-amit-learning.com/images/blog-a.jpg">
+                </div>
+                <div class="blogboxtext">
+                    <h3>Caring for someone at home</h3>
+                    <p>
+                        Most people who get sick with COVID-19 will have only mild illness and should recover at
+                        home. Care at home can help stop the spread of COVID-19
+                    </p>
+                </div>
+            </div>
+          
+          
+            <div class="blogbox">
+              <div class="blogboximage">
+                  <img src="http://frontend.projects-amit-learning.com/images/blog-b.jpg ">
+              </div>
+              <div class="blogboxtext">
+                  <h3>15 ways to keep safe and healthy</h3>
+                  <p>
+                      Most people who get sick with COVID-19 will have only mild illness and should recover at
+                      home. Care at home can help stop the spread of COVID-19
+                  </p>
+              </div>
+          </div>
+          
+          
+          <div class="blogbox">
+            <div class="blogboximage">
+                <img src="http://frontend.projects-amit-learning.com/images/blog-c.jpg">
+            </div>
+            <div class="blogboxtext">
+                <h3>If You Think You Are Sick</h3>
+                <p>
+                    If you are sick with COVID-19 or think you might have it, follow the steps below to help
+                    protect other people in your home and community
+                </p>
+            </div>
+        </div> 
+      </div>
+        </div>
+    
+  </section>
+  <!-- end of blog -->
+  
+  <!-- start with the footer -->
+  <footer class="end">
+    <div class="container">
+      <div class="footermaintext">
+          <div class="footertext">
+            <h2>
+              C<i class="fas fa-virus"></i>VID<span>19</span>
+          </h2>
+          <p>
+            This website is for health information and advice about coronavirus (COVID-19), how to prevent
+            and protect yourself from disease.
+        </p>
+        <p>Learn about the government response to coronavirus on GOV.UK.</p>
+        <div class="footericons">
+            <div class="footericon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="footericon">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="footericon">
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="footertext">
+      <h5>Quick Link</h5>
+      <ul>
+          <li><a href="#about">About Corona</a></li>
+          <li><a href="#symptoms">Symptoms</a></li>
+          <li><a href="#pre">Prevention</a></li>
+          <li><a href="#protect">Protect Youself</a></li>
+         
+      </ul>
+  </div>
+  <div class="footertext">
+    <h5>Helpfull link</h5>
+    <ul>
+        <li><a href="#">Healthcare Professionals</a></li>
+        <li><a href="#">Healthcare Facilities</a></li>
+        <li><a href="#">Older Adults & Medical Conditions</a></li>
+        <li><a href="#">Repare your Family</a></li>
+    </ul>
+</div>
+<div class="footertext">
+  <h5>Important Link</h5>
+  <ul>
+      <li><a href="#">WHO Website</a></li>
+      <li><a href="#">CDC Website</a></li>
+      <li><a href="#">NHS Website</a></li>
+      <li><a href="#">Harvard Health</a></li>
+  </ul>
+</div>
+</div>
+<div class="footercopyrights">
+  <div class="copyrights">
+      <p>&copy; 2020 COVID-19. Template Made by <span>Nourhan Alaaeldin</span> .</p>
+      <a href="#">Privacy Policy</a>
+  </div>
+  <p>
+      Disclaimer: We hope you find the information presented on this website useful. This website is for
+      general information and raise awareness of (2019-nCoV) only.
+  </p>
+  <p>
+      All the information based on WHO, NHS and CDC website. Information on our website is meant for
+      awareness, if you have any doubt please verify from respective site.
+  </p>
+</div>
+</div>
+</footer>
+   <!-- end of footer -->
+</body>
+</html>  
